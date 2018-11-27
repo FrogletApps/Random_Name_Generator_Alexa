@@ -1,0 +1,112 @@
+[
+    {
+        "value": "Capt",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Cmdr",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Col",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Cpl",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Dr",
+        "gender": "N",
+        "rare": false 
+    },
+    {
+        "value": "Gen",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Hon",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Lady",
+        "gender": "F",
+        "rare": true 
+    },
+    {
+        "value": "Lord",
+        "gender": "M",
+        "rare": true 
+    },
+    {
+        "value": "Lt",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Lt Col",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Maj",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Master",
+        "gender": "M",
+        "rare": false 
+    },
+    {
+        "value": "Miss",
+        "gender": "F",
+        "rare": false
+    },
+    {
+        "value": "Mr",
+        "gender": "M",
+        "rare": false 
+    },
+    {
+        "value": "Mrs",
+        "gender": "F",
+        "rare": false
+    },
+    {
+        "value": "Ms",
+        "gender": "F",
+        "rare": false
+    },
+    {
+        "value": "Prof",
+        "gender": "N",
+        "rare": false
+    },
+    {
+        "value": "Pvt",
+        "gender": "N",
+        "rare": true
+    },
+    {
+        "value": "Rev",
+        "gender": "N",
+        "rare": true
+    },
+    {
+        "value": "Rt Hon",
+        "gender": "N",
+        "rare": true 
+    },
+    {
+        "value": "Sgt",
+        "gender": "N",
+        "rare": true 
+    }
+]

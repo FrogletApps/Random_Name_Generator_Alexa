@@ -1,1 +1,2 @@
-# Random_Name_Generator_Alexa
+# Random Name Generator Alexa
+An Alexa skill for generating random names
