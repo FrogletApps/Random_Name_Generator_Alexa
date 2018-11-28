@@ -1,111 +1,133 @@
 [
     {
         "value": "Capt",
+        "long": "Captain",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Cmdr",
+        "long": "Commander",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Col",
+        "long": "Colonel",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Cpl",
+        "long": "Corporal",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Dr",
+        "long": "Doctor",
         "gender": "N",
         "rare": false 
     },
     {
         "value": "Gen",
+        "long": "General",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Hon",
+        "long": "The Honourable",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Lady",
+        "long": "Lady",
         "gender": "F",
         "rare": true 
     },
     {
         "value": "Lord",
+        "long": "Lord",
         "gender": "M",
         "rare": true 
     },
     {
         "value": "Lt",
+        "long": "Lieutenant",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Lt Col",
+        "long": "Lieutenant Colonel",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Maj",
+        "long": "Your Majesty",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Master",
+        "long": "Master",
         "gender": "M",
         "rare": false 
     },
     {
         "value": "Miss",
+        "long": "Miss",
         "gender": "F",
         "rare": false
     },
     {
         "value": "Mr",
+        "long": "Mr",
         "gender": "M",
         "rare": false 
     },
     {
         "value": "Mrs",
+        "long": "Mrs",
         "gender": "F",
         "rare": false
     },
     {
         "value": "Ms",
+        "long": "Ms",
         "gender": "F",
         "rare": false
     },
     {
         "value": "Prof",
+        "long": "Professor",
         "gender": "N",
         "rare": false
     },
     {
         "value": "Pvt",
+        "long": "Private",
         "gender": "N",
         "rare": true
     },
     {
         "value": "Rev",
+        "long": "Reverend",
         "gender": "N",
         "rare": true
     },
     {
         "value": "Rt Hon",
+        "long": "The Right Honourable",
         "gender": "N",
         "rare": true 
     },
     {
         "value": "Sgt",
+        "long": "Sergeant",
         "gender": "N",
         "rare": true 
     }
