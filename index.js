@@ -11,20 +11,29 @@ const GenerateNameHandler = {
         && request.intent.name === 'GenerateNameIntent');
   },
   handle(handlerInput) {
-    /*var gender = handlerInput.requestEnvelope.request.intent.slots.gender.value;
-    //var gender2 = handlerInput.requestEnvelope.request.intent.slots.GENDER.resolutions.resolutionsPerAuthority.values.value.id;
-    //If gender does not have a value set it to neutral
-    if (!gender) {
-        gender = 0;
+    //N is neutral, M is male, F is female
+    var genderInput = null;
+    try {
+      genderInput = handlerInput.requestEnvelope.request.intent.slots.gender.resolutions.resolutionsPerAuthority[0].values[0].value.id;
     }
-    console.log("The gender value is: " + gender);*/
+    catch(error) {
+      //If id does not have a value set it to neutral
+      if (genderInput === null){
+        genderInput = "N";
+      }
+    }
 
-    const output = choose();
-    const speechOutput = output;
+    console.log("The gender value is: " + genderInput);
+
+    const outputArray = choose(genderInput);
+    const outputWritten = outputArray[1] + " " + outputArray[2] + " " + outputArray[3];
+    const outputSpoken = outputArray[0] + " " + outputArray[2] + " " + outputArray[3];
+    console.log(outputWritten + " | " +  outputSpoken);
+    const speechOutput = outputSpoken;
 
     return handlerInput.responseBuilder
       .speak(speechOutput)
-      .withSimpleCard(SKILL_NAME, output)
+      .withSimpleCard(SKILL_NAME, outputWritten)
       .getResponse();
   },
 };
@@ -97,6 +106,9 @@ exports.handler = skillBuilder
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();
+  
+  
+//Code to choose random names:
 
 const fs = require("fs");
 const titlesFile = fs.readFileSync("json/titles.json");
@@ -113,14 +125,14 @@ function random(limit){
 }
 
 //Pick random values from the jsonData arrays
-function randomArrayValues(titlesArray, forenamesArray, surnamesArray){
+function getRandomArrayValues(titlesArray, forenamesArray, surnamesArray, genderInput){
     //Number in each array to pick
     var randomTitle = random(titlesArray.length);
-    var randomForename = random(forenamesArray.length);
-    var randomSurname = random(surnamesArray.length);
+    const randomForename = random(forenamesArray.length);
+    const randomSurname = random(surnamesArray.length);
 
-    var rareTitleChance = 0.5;
-    var rareTitlePick = Math.random();
+    const rareTitleChance = 0.5;
+    const rareTitlePick = Math.random();
 
     //If the gender of the title and firstname don't match OR the title is too rare then pick a new title
     while (titlesArray[randomTitle].gender != "N" && 
@@ -128,10 +140,11 @@ function randomArrayValues(titlesArray, forenamesArray, surnamesArray){
            (titlesArray[randomTitle].rare == true && rareTitleChance <= rareTitlePick)){
                 randomTitle = random(titlesArray.length);
     }
-    return titlesArray[randomTitle].value + " " + forenamesArray[randomForename].value + " " + surnamesArray[randomSurname].value;
+    const outputArray = [titlesArray[randomTitle].long, titlesArray[randomTitle].value, forenamesArray[randomForename].value, surnamesArray[randomSurname].value];
+    return outputArray;
 }
 
 //Choose a random name
-function choose(){
-  return randomArrayValues(titles, forenames, surnames);
+function choose(genderInput){
+  return getRandomArrayValues(titles, forenames, surnames, genderInput);
 }
